@@ -1,0 +1,10 @@
+SCENARIO
+You are debugging a delivery cost calculator. When a user types 'two hundred' instead
+of a number for the order amount, the program crashes with an unhandled exception.
+
+Question: Describe how you would use a try-except block to handle this error gracefully. Name the specific exception type you would catch, and explain how you would structure the code so the program asks the user to re-enter the value instead of terminating.
+
+Explaination:
+A `try-except` block can be used to handle the error when the user enters a non-numeric value. The program should place the code that converts the user's input into a number inside the `try` block. If the user enters a value such as "two hundred", Python raises a `ValueError` because the input cannot be converted into a numeric value.
+
+The `except ValueError` block should display a clear error message and ask the user to enter the order amount again. This can be done by placing the input process inside a loop, so the program continues asking for a valid value until the user enters a numeric amount instead of terminating.

@@ -1,0 +1,11 @@
+SCENARIO
+You are working on an order history feature that must save completed delivery orders to
+a JSON file so the system can reload all orders when the app restarts.
+
+Question: Describe the complete Python sequence to write a single order dictionary to a JSON
+file and read it back. What exception is raised if the file does not exist at read time, and how should your program handle it so the app starts cleanly on its first run?
+
+Explaination:
+To write a single order dictionary to a JSON file, the program should first import the `json` module and create an order dictionary containing the required order details. The file should then be opened in write mode using `open()`, and `json.dump()` should be used to write the dictionary into the JSON file. After writing, the file should be closed.
+
+To read the order back, the program should open the JSON file in read mode and use `json.load()` to convert the JSON data back into a Python dictionary. If the file does not exist when the program tries to read it, Python raises a `FileNotFoundError`. The program should handle this exception using a `try-except` block and treat the situation as an empty order history, allowing the app to start normally on its first run instead of crashing.

@@ -1,0 +1,20 @@
+SCENARIO
+You are writing a delivery fee calculator that applies three different fee rules: no charge
+if the order value is Rs 500 or more, Rs 30 fee if distance is 5 km or less, and Rs 60 fee for
+distances above 5 km. A colleague proposes writing this as a single lambda function.
+
+Question: Explain why a named function defined with def is more appropriate than a lambda
+for this multi-condition fee logic. Then describe one specific situation inside this same app where
+a lambda would genuinely be the better choice.
+
+
+Explaination:
+A named function defined using `def` is more appropriate for the delivery fee calculator because 
+logic contains multiple conditions and different fee rules. A named function is easier to read,
+understand, test, and maintain, especially when the same calculation needs to be used in different
+parts of the application. A lambda is mainly designed for short and simple expressions, so using one
+for this multi-condition logic would make the code less readable.
+
+A lambda would be a better choice for a simple operation such as sorting a list of orders by their
+total amount. For example, a lambda could be used as the key function when sorting orders because the
+operation is short and only requires a simple expression.

@@ -1,0 +1,11 @@
+SCENARIO
+You are designing a delivery tracking system. Each delivery must store the rider's name,
+current GPS location, assigned order ID, and status (e.g. 'On the way'). It must also
+support actions such as updating the location and marking the delivery as complete.
+
+Question: Justify why a class is a better design choice here than storing all of this data in separate variables or a plain dictionary. Identify at least two OOP principles your class design would apply and explain what each one achieves.
+
+Explaination:
+A class is a better design choice because it can keep the rider's name, GPS location, order ID, and delivery status together as one object. It can also contain methods such as updating the location and marking the delivery as complete. This makes the program more organized, reusable, and easier to maintain than using separate variables or a plain dictionary.
+
+The class design can apply encapsulation by keeping the delivery data and the operations that work on that data together in one class. It can also apply abstraction by providing simple methods such as `update_location()` and `complete_delivery()` so that the user can perform actions without needing to manage the internal details of the delivery system.

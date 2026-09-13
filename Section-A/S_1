@@ -9,7 +9,6 @@ incorrect result when applying a 10% discount calculation.
 
 
 Explaination:
+The order total of Rs 499.50 should be stored as a `float` because it contains a decimal value. The delivery distance of 7.3 km should also be stored as a `float` because it contains a decimal value. The payment method 'UPI' should be stored as a `string` because it is text. The restaurant status `True` should be stored as a `boolean` because it represents whether the restaurant is accepting orders or not.
 
-The order total, Rs 499.50, should have the float data type because it contains a decimal value. The delivery distance, 7.3 km, should also be a float because it is a decimal number. The payment method, 'UPI', should be a string because it is text, while True should be a boolean because it represents whether the restaurant is accepting orders or not.
-
-If Rs 499.50 is stored as an integer instead of a float, the decimal part may be lost and the value may become Rs 499. When a 10% discount is calculated, the discount would then be calculated on Rs 499 instead of the actual order value of Rs 499.50. This would give an incorrect discount and final payable amount. Therefore, using the correct data type is important for getting accurate results in billing calculations.
+If Rs 499.50 were stored as an integer, the decimal part would be lost and the value could become Rs 499 or another rounded value depending on the conversion. This would make the 10% discount calculation inaccurate because the calculation would not use the original order amount of Rs 499.50. Using a `float` preserves the decimal value and allows the discount to be calculated correctly.

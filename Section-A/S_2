@@ -3,7 +3,12 @@ You are developing a restaurant menu system. A teammate suggests storing the men
 as a list of tuples like [('Paneer Burger', 180, 'Snacks'), ('Masala Dosa', 90, 'Breakfast')],
 while you prefer a dictionary where each dish name is the key.
 
+Question: Compare these two data structures for looking up a dish price by name. Which gives
+faster and more readable access, and why? Describe one limitation of the list-of-tuples
+approach that the dictionary design solves.
 
-A dictionary provides faster and more readable access when looking up a dish price by name because the dish name is directly used as the key. For example, a dish such as `"Paneer Burger"` can be accessed directly using its key instead of searching through each tuple in the list. In a list of tuples, the program may need to check the tuples one by one to find the required dish, which makes the lookup less efficient and less readable.
 
-One limitation of the list-of-tuples approach is that the dish name is not a direct key, so accessing a particular dish requires searching through the list. The dictionary design solves this problem by using each dish name as a key, allowing the price and other information of that dish to be accessed directly.
+Explaination:
+A dictionary provides faster and more readable access when looking up a dish price by name because the dish name can be used directly as a key. For example, a dictionary can store each dish name as a key and its price and category as values, making it easy to find the required information without searching through every item.
+
+In a list of tuples, the program may need to search through the tuples one by one to find a dish with a particular name. This approach is less convenient and less readable for frequent lookups. A dictionary solves this limitation by providing direct access to a dish using its name as the key.
